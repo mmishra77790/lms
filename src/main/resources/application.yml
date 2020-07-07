@@ -1,0 +1,90 @@
+spring: 
+  thymeleaf: 
+    mode: LEGACYHTML5
+    cacheL: false
+  datasource: 
+    initialize:true
+server: 
+  port: 8084
+
+app:
+  courseTypes:
+    -
+      id: 0
+      name: "Basic Course"
+      code: "Basic"
+      description: "Few Course available in Basic"
+    -
+      id: 1
+      name: "Advance Course"
+      code: "Advance"
+      description: "Added more course as per basic plan"
+    -
+      id: 2
+      name: "Premium Course"
+      code: "Premium"
+      description: "All Courses"
+  courses:
+    -
+      id: 0
+      name: "Core Java"
+      code: "CJAVA"
+      description: "Core Java Course in Basic Plan"
+      courseType: "Basic"
+      amount: 100
+    -
+      id: 1
+      name: "Advance Java"
+      code: "AJAVA"
+      description: "Advance Java Course in Basic Plan"
+      courseType: "Basic"
+      amount: 200
+    -
+      id: 2
+      name: "Core & Advance Java"
+      code: "CAJAVA"
+      description: "Core & Advance Java Course in Advance Plan"
+      courseType: "Advance"
+      amount: 400
+    - 
+      id: 3
+      name: "Core & Advance & Spring Framework course in Premium plan"
+      code: "CASJAVA"
+      description: "Full Course"
+      courseType: "Premium"
+      amount: 1000
+  tax:
+    -
+      id: 0
+      name: "Central GST"
+      code: "CGST"
+      description: "Central GST Tax"
+      countryCode: 0
+      percentage: 9
+    -
+      id: 1
+      name: "State GST"
+      code: "SGST"
+      description: "State GST Tax"
+      countryCode: 0
+      percentage: 9
+    -
+      id: 2
+      name: "USA TAX"
+      code: "USA"
+      description: "America Taxes"
+      countryCode: 1
+      percentage: 24
+  countries:
+    -
+      id: 0
+      name: "INDIA"
+      code: "IND"
+      description: "India"
+      currency: "INR"
+    -
+      id: 1
+      name: "America"
+      code: "USA"
+      description: "United State Of America"
+      currency: "USD"
